@@ -1,0 +1,42 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scrollbar */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.attribution { 
+    position: absolute;
+    font-size: 11px; 
+    text-align: center; 
+    align-items: center;
+    bottom: 5px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
