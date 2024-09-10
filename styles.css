@@ -20,6 +20,7 @@ html {
 }
 
 body {
+    background-color: var(--Light-grayish-cyan);
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -27,6 +28,43 @@ body {
     min-height: 100vh;
     max-width: 375px;
     margin: 0 auto;
+}
+
+.container {
+    background-color: var(--White);
+}
+
+.price {
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.tip {
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+}
+
+.custom {
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.number-people {
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+.tip-container {
+    background-color: var(--Very-dark-cyan);
+}
+
+h5 {
+    color: var(--Very-light-grayish-cyan);
+}
+
+p {
+    color: var(--Grayish-cyan);
+}
+
+.reset {
+    background-color: var(--Strong-cyan);
 }
 
 .attribution { 
