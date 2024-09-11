@@ -46,8 +46,8 @@ body {
     display: flex;
     border: none;
     margin: 0.5rem 0 0 0;
-    height: 1.5rem;
     width: 11.2rem;
+    font-size: 1.44rem;
 }
 
 .money-sign {
@@ -68,11 +68,13 @@ body {
 
 .custom {
     background-color: var(--Very-light-grayish-cyan);
+    font-size: 1.44rem;
 }
 
 .number-people {
     background-color: var(--Very-light-grayish-cyan);
     display: flex;
+    font-size: 1.44rem;
 }
 
 .tip-container {
@@ -96,7 +98,7 @@ p {
 .attribution { 
     display:flex;
     justify-content: center;
-    transform: translateY(22rem);
+    transform: translateY(5rem);
     font-size: 11px; 
 }
 
