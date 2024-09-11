@@ -21,10 +21,11 @@ html {
 
 body {
     background-color: var(--Light-grayish-cyan);
-    min-height: 100vh;
-    margin: 0 auto;
+    font-family: Space Mono, sans-serif;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 .logo {
@@ -43,12 +44,17 @@ body {
 .price {
     background-color: var(--Very-light-grayish-cyan);
     display: flex;
+    border: none;
     margin: 0.5rem 0 0 0;
+    height: 1.5rem;
+    width: 11.2rem;
 }
 
 .money-sign {
     position: relative;
-    top: -1em;
+    top: -1.25em;
+    margin-left: 0.75rem;
+    width: 0.5rem;
 }
 
 .tip {
