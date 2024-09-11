@@ -43,16 +43,18 @@ body {
 
 .price {
     background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
     display: flex;
+    text-align: right;
     border: none;
+    font-size: 1.44rem;
     margin: 0.5rem 0 0 0;
     width: 11.2rem;
-    font-size: 1.44rem;
 }
 
-.money-sign {
+.money-logo {
     position: relative;
-    top: -1.25em;
+    top: -1.5em;
     margin-left: 0.75rem;
     width: 0.5rem;
 }
@@ -60,21 +62,39 @@ body {
 .tip {
     color: var(--White);
     background-color: var(--Very-dark-cyan);
+    width: 5rem;
 }
 
 .buttons {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .custom {
     background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    text-align: right;
+    border: none;
     font-size: 1.44rem;
+    width: 5rem;
 }
 
 .number-people {
     background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
     display: flex;
+    text-align: right;
+    border: none;
     font-size: 1.44rem;
+    width: 11.2rem;
+}
+
+.person-logo {
+    position: relative;
+    top: -1.5em;
+    margin-left: 0.75rem;
+    width: 0.5rem;
 }
 
 .tip-container {
