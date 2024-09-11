@@ -21,21 +21,35 @@ html {
 
 body {
     background-color: var(--Light-grayish-cyan);
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
     min-height: 100vh;
     max-width: 375px;
     margin: 0 auto;
 }
 
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+}
+
 .container {
     background-color: var(--White);
+    border-radius: 1rem;
+}
+
+.bill {
+    padding: 2rem;
 }
 
 .price {
     background-color: var(--Very-light-grayish-cyan);
+    display: flex;
+}
+
+.money-sign {
+    position: relative;
+    top: -1em;
 }
 
 .tip {
