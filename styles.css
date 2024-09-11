@@ -82,11 +82,10 @@ p {
 }
 
 .attribution { 
-    position: absolute;
+    display:flex;
+    justify-content: center;
+    transform: translateY(22rem);
     font-size: 11px; 
-    text-align: center; 
-    align-items: center;
-    bottom: 5px;
 }
 
 .attribution a { 
