@@ -22,8 +22,9 @@ html {
 body {
     background-color: var(--Light-grayish-cyan);
     min-height: 100vh;
-    max-width: 375px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -36,15 +37,13 @@ body {
 .container {
     background-color: var(--White);
     border-radius: 1rem;
-}
-
-.bill {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .price {
     background-color: var(--Very-light-grayish-cyan);
     display: flex;
+    margin: 0.5rem 0 0 0;
 }
 
 .money-sign {
@@ -55,6 +54,7 @@ body {
 .tip {
     color: var(--White);
     background-color: var(--Very-dark-cyan);
+    display: grid;
 }
 
 .custom {
@@ -63,10 +63,13 @@ body {
 
 .number-people {
     background-color: var(--Very-light-grayish-cyan);
+    display: flex;
 }
 
 .tip-container {
     background-color: var(--Very-dark-cyan);
+    width: 10.3rem;
+    padding: 1rem;
 }
 
 h5 {
