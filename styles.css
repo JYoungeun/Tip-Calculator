@@ -54,6 +54,9 @@ body {
 .tip {
     color: var(--White);
     background-color: var(--Very-dark-cyan);
+}
+
+.buttons {
     display: grid;
 }
 
