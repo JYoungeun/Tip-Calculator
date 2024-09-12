@@ -22,26 +22,24 @@ html {
 body {
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, sans-serif;
-    display: flex;
-    justify-content: center;
     min-height: 100vh;
-    margin: 0 auto;
 }
 
 .logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem;
+    margin: 0 auto 0;
+    padding: 2.5rem;
 }
 
 .container {
     background-color: var(--White);
+    margin: 0 auto 0;
     border-radius: 1rem;
     padding: 1.5rem;
+    width: fit-content;
 }
 
-.price {
+.price-input {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     display: flex;
@@ -49,7 +47,7 @@ body {
     border: none;
     font-size: 1.44rem;
     margin: 0.5rem 0 0 0;
-    width: 11.2rem;
+    width: 12rem;
 }
 
 .money-logo {
@@ -59,17 +57,18 @@ body {
     width: 0.5rem;
 }
 
-.tip {
-    color: var(--White);
-    background-color: var(--Very-dark-cyan);
-    width: 5rem;
-}
-
 .buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
+    width: 12rem;
+}
+
+.tip {
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+    border: none;
 }
 
 .custom {
@@ -78,17 +77,17 @@ body {
     text-align: right;
     border: none;
     font-size: 1.44rem;
-    width: 5rem;
+    width: 6rem;
 }
 
-.number-people {
+.people-input {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     display: flex;
     text-align: right;
     border: none;
     font-size: 1.44rem;
-    width: 11.2rem;
+    width: 12rem;
 }
 
 .person-logo {
@@ -100,20 +99,26 @@ body {
 
 .tip-container {
     background-color: var(--Very-dark-cyan);
-    width: 10.3rem;
-    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 12rem;
 }
 
 h5 {
     color: var(--Very-light-grayish-cyan);
+    font-size: 0.6rem;
 }
 
 p {
     color: var(--Grayish-cyan);
+    font-size: 0.6rem;
 }
 
 .reset {
     background-color: var(--Strong-cyan);
+    border-radius: 0.2rem;
+    border: none;
+    height: 1.44rem;
+    width: 10.35rem;
 }
 
 .attribution { 
