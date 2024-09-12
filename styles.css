@@ -101,6 +101,15 @@ body {
     background-color: var(--Very-dark-cyan);
     border-radius: 0.5rem;
     width: 12rem;
+    padding: 1rem;
+}
+
+.tip-amount {
+    padding: 0.25rem;
+}
+
+.total {
+    padding: 0.25rem;
 }
 
 h5 {
@@ -118,7 +127,7 @@ p {
     border-radius: 0.2rem;
     border: none;
     height: 1.44rem;
-    width: 10.35rem;
+    width: 10rem;
 }
 
 .attribution { 
