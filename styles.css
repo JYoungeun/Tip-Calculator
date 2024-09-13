@@ -165,5 +165,28 @@ p {
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .price-input {
+        width: 14.5rem;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 14rem;
+    }
+
+    .tip {
+        width: 4.5rem;
+    }
+
+    .custom {
+        width: 4.5rem;
+    }
+
+    .people-input {
+        width: 14.5rem;
     }
 }
