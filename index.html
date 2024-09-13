@@ -19,38 +19,44 @@
   <main>
     <img class="logo" src="images/logo.svg" alt="splitter"> 
     <div class="container">
-      <div>
-        <label for="price" class="bill">Bill</label>
-        <input type="number" id="price" class="price-input">
-        <img class="money-logo" src="images/icon-dollar.svg" alt="$$$">
-      </div>
-      <div>
-        <label for="custom" class="">Select Tip %</label>
-        <div class="buttons">
-          <button id="tipBtn1" class="tip">5%</button>
-          <button id="tipBtn2" class="tip">10%</button>
-          <button id="tipBtn3" class="tip">15%</button>
-          <button id="tipBtn4" class="tip">25%</button>
-          <button id="tipBtn5" class="tip">50%</button>
-          <input type="text" id="custom" class="custom">
+      <section class="grid-container-1">
+        <div>
+          <label for="price" class="input-titles">Bill</label>
+          <input type="number" id="price" class="price-input">
+          <img class="money-logo" src="images/icon-dollar.svg" alt="$$$">
         </div>
-      </div>
-      <div>
-        <label for="number-people" class="people">Number of People</label>
-        <input type="number" id="number-people" class="people-input">
-        <img class="person-logo" src="images/icon-person.svg" alt="person">
-      </div>
-      <div class="tip-container">
-        <div class="tip-amount">
-          <h5>Tip Amount</h5>
-          <p>/ person</p>
+        <div>
+          <label for="custom" class="input-titles">Select Tip %</label>
+          <div class="buttons">
+            <button id="tipBtn1" class="tip">5%</button>
+            <button id="tipBtn2" class="tip">10%</button>
+            <button id="tipBtn3" class="tip">15%</button>
+            <button id="tipBtn4" class="tip">25%</button>
+            <button id="tipBtn5" class="tip">50%</button>
+            <input type="text" id="custom" class="custom">
+          </div>
         </div>
-        <div class="total">
-          <h5>Total</h5>
-          <p>/ person</p>
+        <div>
+          <label for="number-people" class="input-titles">Number of People</label>
+          <input type="number" id="number-people" class="people-input">
+          <img class="person-logo" src="images/icon-person.svg" alt="person">
         </div>
-        <button id="resetBtn" class="reset">Reset</button>
-      </div>
+      </section>
+      <section class="grid-container-2">
+        <div class="tip-container">
+          <div class="tip-amount">
+            <h5>Tip Amount</h5>
+            <p>/ person</p>
+          </div>
+          <div class="total">
+            <h5>Total</h5>
+            <p>/ person</p>
+          </div>
+          <div class="resetBtn-box">
+            <button id="resetBtn" class="reset">Reset</button>
+          </div>
+        </div>
+      </section>
     </div>
     <div class="attribution">
       Challenge by&nbsp<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
