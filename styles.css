@@ -14,9 +14,15 @@
     --White: hsl(0, 0%, 100%);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 html {
     width: 100%;
-    overflow-x: hidden; /* prevent horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 body {
@@ -25,12 +31,14 @@ body {
 
 main {
     font-family: Space Mono, sans-serif;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.logo {
+.background {
     display: block;
-    margin: 0 auto 0;
+    margin: 0 auto 0 auto;
     padding: 2rem;
 }
 
@@ -55,7 +63,7 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    font-size: 1.44rem;
+    height: 1.44rem;
     width: 12rem;
     margin-top: 0.25rem;
 }
@@ -89,7 +97,7 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    font-size: 1.44rem;
+    height: 1.44rem;
     width: 6rem;
 }
 
@@ -100,14 +108,14 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    font-size: 1.44rem;
+    height: 1.44rem;
     width: 12rem;
     margin-top: 0.25rem;
 }
 
 .person-logo {
     position: relative;
-    top: -1.5em;
+    top: -1.6em;
     margin-left: 0.75rem;
     width: 0.5rem;
 }
@@ -162,7 +170,7 @@ p {
 }
 
 @media (min-width: 375px) {
-    .logo {
+    .background {
         margin: 2.5rem auto 2.5rem auto;
     }
 
@@ -189,6 +197,10 @@ p {
         height: 2rem;
     }
 
+    .money-logo {
+        top: -1.75rem;
+    }
+
     .buttons {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -204,11 +216,16 @@ p {
     .custom {
         font-size: 1.44rem;
         width: 5rem;
+        height: 2rem;
     }
 
     .people-input {
         font-size: 1.44rem;
         width: 15.35rem;
         height: 2rem;
+    }
+
+    .person-logo {
+        top: -1.8rem;
     }
 }
