@@ -31,7 +31,7 @@ main {
 .logo {
     display: block;
     margin: 0 auto 0;
-    padding: 2.5rem;
+    padding: 2rem;
 }
 
 .container {
@@ -162,18 +162,20 @@ p {
 }
 
 @media (min-width: 375px) {
+    .logo {
+        margin: 2.5rem auto 2.5rem auto;
+    }
+
     .container {
         display: grid;
-        align-items: center;
-        justify-items: center;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
-        height: 22rem;
+        height: 20rem;
     }
 
     .tip-container {
-        width: 15rem;
-        height: 16rem;
+        width: 16rem;
+        height: 17rem;
     }
 
     .input-titles {
@@ -191,6 +193,7 @@ p {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         width: 15.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .tip {
