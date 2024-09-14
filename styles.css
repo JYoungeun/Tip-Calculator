@@ -43,7 +43,7 @@ main {
 }
 
 .input-titles {
-    color: var(--Very-dark-cyan);
+    color: var(--Dark-grayish-cyan);
     font-size: 0.65rem;
     font-weight: 500;
 }
@@ -164,29 +164,48 @@ p {
 @media (min-width: 375px) {
     .container {
         display: grid;
+        align-items: center;
+        justify-items: center;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
+        height: 22rem;
+    }
+
+    .tip-container {
+        width: 15rem;
+        height: 16rem;
+    }
+
+    .input-titles {
+        color: var(--Dark-grayish-cyan);
+        font-weight: bold;
     }
 
     .price-input {
-        width: 14.5rem;
+        font-size: 1.44rem;
+        width: 15.35rem;
+        height: 2rem;
     }
 
     .buttons {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        width: 14rem;
+        width: 15.5rem;
     }
 
     .tip {
-        width: 4.5rem;
+        width: 5rem;
+        height: 2rem;
     }
 
     .custom {
-        width: 4.5rem;
+        font-size: 1.44rem;
+        width: 5rem;
     }
 
     .people-input {
-        width: 14.5rem;
+        font-size: 1.44rem;
+        width: 15.35rem;
+        height: 2rem;
     }
 }
