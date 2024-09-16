@@ -59,10 +59,11 @@ main {
 .price-input {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
+    border: 0.12rem solid transparent;
+    transition: border-color 0.3s ease;
+    border-radius: 0.2rem;
     display: flex;
     text-align: right;
-    border: none;
-    border-radius: 0.2rem;
     height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
@@ -71,6 +72,11 @@ main {
 .price-input:hover {
     border: 0.12rem solid var(--Strong-cyan);
     cursor: pointer;
+}
+
+.price-input:focus {
+    border-color: var(--Strong-cyan);
+    outline: none;
 }
 
 .money-logo {
@@ -105,12 +111,17 @@ main {
     cursor: pointer;
 }
 
+.tip:focus {
+    background-color: var(--Light-grayish-cyan);
+}
+
 .custom {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
-    text-align: right;
-    border: none;
+    border: 0.12rem solid transparent;
+    transition: border-color 0.3s ease;
     border-radius: 0.2rem;
+    text-align: right;
     height: 1.75rem;
     width: 6rem;
 }
@@ -120,13 +131,19 @@ main {
     cursor: pointer;
 }
 
+.custom:focus {
+    border-color: var(--Strong-cyan);
+    outline: none;
+}
+
 .people-input {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
+    border: 0.12rem solid transparent;
+    transition: border-color 0.3s ease;
+    border-radius: 0.2rem;
     display: flex;
     text-align: right;
-    border: none;
-    border-radius: 0.2rem;
     height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
@@ -135,6 +152,11 @@ main {
 .people-input:hover {
     border: 0.12rem solid var(--Strong-cyan);
     cursor: pointer;
+}
+
+.people-input:focus {
+    border-color: var(--Strong-cyan);
+    outline: none;
 }
 
 .person-logo {
