@@ -51,7 +51,7 @@ main {
 }
 
 .input-titles {
-    color: var(--Dark-grayish-cyan);
+    color: var(--Very-dark-cyan);
     font-size: 0.65rem;
     font-weight: 500;
 }
@@ -63,14 +63,19 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    height: 1.44rem;
+    height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
 }
 
+.price-input:hover {
+    border: 0.12rem solid var(--Strong-cyan);
+    cursor: pointer;
+}
+
 .money-logo {
     position: relative;
-    top: -1.5em;
+    top: -1.6em;
     margin-left: 0.75rem;
     width: 0.5rem;
 }
@@ -85,10 +90,19 @@ main {
 }
 
 .tip {
+    font-family: Space Mono, sans-serif;
+    font-weight: bold;
     color: var(--White);
     background-color: var(--Very-dark-cyan);
     border: none;
     border-radius: 0.2rem;
+    height: 1.75rem;
+}
+
+.tip:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
 }
 
 .custom {
@@ -97,8 +111,13 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    height: 1.44rem;
+    height: 1.75rem;
     width: 6rem;
+}
+
+.custom:hover {
+    border: 0.12rem solid var(--Strong-cyan);
+    cursor: pointer;
 }
 
 .people-input {
@@ -108,14 +127,19 @@ main {
     text-align: right;
     border: none;
     border-radius: 0.2rem;
-    height: 1.44rem;
+    height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
 }
 
+.people-input:hover {
+    border: 0.12rem solid var(--Strong-cyan);
+    cursor: pointer;
+}
+
 .person-logo {
     position: relative;
-    top: -1.6em;
+    top: -1.65em;
     margin-left: 0.75rem;
     width: 0.5rem;
 }
@@ -156,6 +180,12 @@ p {
     border: none;
     height: 1.8rem;
     width: 10rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.reset:hover {
+    background-color: var(--Light-grayish-cyan);
 }
 
 .attribution { 
@@ -193,7 +223,7 @@ p {
 
     .price-input {
         font-size: 1.44rem;
-        width: 15.35rem;
+        width: 16rem;
         height: 2rem;
     }
 
@@ -220,7 +250,7 @@ p {
 
     .people-input {
         font-size: 1.44rem;
-        width: 15.35rem;
+        width: 16rem;
         height: 2rem;
     }
 
