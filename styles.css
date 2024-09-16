@@ -57,6 +57,8 @@ main {
 }
 
 .price-input {
+    font-family: Space Mono, sans-serif;
+    font-weight: 700;
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     border: 0.12rem solid transparent;
@@ -67,6 +69,7 @@ main {
     height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
+    padding-right: 0.5rem;
 }
 
 .price-input:hover {
@@ -96,7 +99,6 @@ main {
 }
 
 .tip {
-    font-family: Space Mono, sans-serif;
     font-weight: bold;
     color: var(--White);
     background-color: var(--Very-dark-cyan);
@@ -116,6 +118,8 @@ main {
 }
 
 .custom {
+    font-family: Space Mono, sans-serif;
+    font-weight: 700;
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     border: 0.12rem solid transparent;
@@ -124,6 +128,7 @@ main {
     text-align: right;
     height: 1.75rem;
     width: 6rem;
+    padding-right: 0.5rem;
 }
 
 .custom:hover {
@@ -137,6 +142,8 @@ main {
 }
 
 .people-input {
+    font-family: Space Mono, sans-serif;
+    font-weight: 700;
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
     border: 0.12rem solid transparent;
@@ -147,6 +154,7 @@ main {
     height: 1.75rem;
     width: 12rem;
     margin-top: 0.25rem;
+    padding-right: 0.5rem;
 }
 
 .people-input:hover {
@@ -244,7 +252,7 @@ p {
     }
 
     .price-input {
-        font-size: 1.44rem;
+        font-size: 1rem;
         width: 16rem;
         height: 2rem;
     }
@@ -265,13 +273,13 @@ p {
     }
 
     .custom {
-        font-size: 1.44rem;
+        font-size: 1rem;
         width: 5rem;
         height: 2rem;
     }
 
     .people-input {
-        font-size: 1.44rem;
+        font-size: 1rem;
         width: 16rem;
         height: 2rem;
     }
