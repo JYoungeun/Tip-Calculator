@@ -179,6 +179,8 @@ main {
     border-radius: 0.5rem;
     width: 12rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .tip-amount {
@@ -197,6 +199,15 @@ h5 {
 p {
     color: var(--Grayish-cyan);
     font-size: 0.6rem;
+}
+
+.output {
+    color: var(--Strong-cyan);
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -1.8rem;
 }
 
 .resetBtn-box {
@@ -294,6 +305,11 @@ p {
 
     .total {
         margin-top: 1.25rem;
+    }
+
+    .output {
+        font-size: 1.65rem;
+        margin-top: -2.5rem;
     }
 
     .resetBtn-box {
