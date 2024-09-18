@@ -141,6 +141,14 @@ main {
     outline: none;
 }
 
+.alert {
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.5rem;
+    margin-top: -0.95rem;
+}
+
 .people-input {
     font-family: Space Mono, sans-serif;
     font-weight: 700;
