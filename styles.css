@@ -149,6 +149,10 @@ main {
     margin-top: -0.95rem;
 }
 
+.alert.hidden {
+    display: none;
+}
+
 .people-input {
     font-family: Space Mono, sans-serif;
     font-weight: 700;
