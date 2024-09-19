@@ -1,11 +1,6 @@
 const priceInput = document.getElementById('price');
 const peopleInput = document.getElementById('number-people');
 const buttons = document.querySelectorAll('.tip');
-const tipButtonOne = document.getElementById('tipBtn1');
-const tipButtonTwo = document.getElementById('tipBtn2');
-const tipButtonThree = document.getElementById('tipBtn3');
-const tipButtonFour = document.getElementById('tipBtn4');
-const tipButtonFive = document.getElementById('tipBtn5');
 const customInput = document.getElementById('custom');
 const alertText = document.getElementById('alert');
 const tipAmount = document.getElementById('tip-amount-output');
@@ -48,6 +43,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', function() {
             buttons.forEach(tip => tip.classList.remove('active'));
             this.classList.add('active');
+            selectedTipPercentage = tipPercentages[this.id];
+            calculateTip();
         });
 
         customInput.addEventListener('click', () => {
