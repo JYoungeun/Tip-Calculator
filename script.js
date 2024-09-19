@@ -21,6 +21,50 @@ const tipPercentages = {
 
 let selectedTipPercentage = 0;
 
+function calculateTip() {
+    const price = parseFloat(priceInput.value);
+    const people = parseInt(peopleInput.value);
+
+    if (isNaN(price) || isNaN(people) || people <= 0) {
+        tipAmount.innerText = "$0.00";
+        return;
+    };
+
+    const tip = (price * selectedTipPercentage) / 100;
+    tipAmount.innerText = `$${(tip / people).toFixed(2)}`;
+};
+
+priceInput.addEventListener('input', calculateTip);
+
+peopleInput.addEventListener('input', calculateTip);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const buttons = document.querySelectorAll('.tip');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            buttons.forEach(tip => tip.classList.remove('active'));
+            this.classList.add('active');
+        });
+
+        customInput.addEventListener('click', () => {
+            buttons.forEach(tip => tip.classList.remove('active'));
+        });
+
+        customInput.addEventListener('input', () => {
+            if (customInput.value !== "") {
+                button.disabled = true;
+            } else {
+                button.disabled = false;
+            };
+            selectedTipPercentage = parseFloat(customInput.value) || 0;
+            calculateTip();
+        });
+        selectedTipPercentage = tipPercentages[this.id] || 0;
+        calculateTip();
+    });
+});
+
 priceInput.addEventListener('keydown', (event) => {
     if (event.key === 'e' || event.key === 'E' || event.key === '-') {
         event.preventDefault();
@@ -61,50 +105,6 @@ peopleInput.addEventListener('keydown', (event) => {
         }
     }
 });
-
-function calculateTip() {
-    const price = parseFloat(priceInput.value);
-    const people = parseInt(peopleInput.value);
-
-    if (isNaN(price) || isNaN(people) || people <= 0) {
-        tipAmount.innerText = "$0.00";
-        return;
-    };
-
-    const tip = (price * selectedTipPercentage) / 100;
-    tipAmount.innerText = `$${(tip / people).toFixed(2)}`;
-};
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const buttons = document.querySelectorAll('.tip');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            buttons.forEach(tip => tip.classList.remove('active'));
-            this.classList.add('active');
-        });
-
-        customInput.addEventListener('click', () => {
-            buttons.forEach(tip => tip.classList.remove('active'));
-        });
-
-        customInput.addEventListener('input', () => {
-            if (customInput.value !== "") {
-                button.disabled = true;
-            } else {
-                button.disabled = false;
-            };
-            selectedTipPercentage = parseFloat(customInput.value) || 0;
-            calculateTip();
-        });
-        selectedTipPercentage = tipPercentages[this.id] || 0;
-        calculateTip();
-    });
-});
-
-priceInput.addEventListener('input', calculateTip);
-
-peopleInput.addEventListener('input', calculateTip);
 
 resetButton.addEventListener('click', () => {
     priceInput.value = "";
