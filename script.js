@@ -11,6 +11,16 @@ const tipAmount = document.getElementById('tip-amount-output');
 const totalAmount = document.getElementById('total-output');
 const resetButton = document.getElementById('resetBtn');
 
+const tipPercentages = {
+    tipButtonOne: 5,
+    tipButtonTwo: 10,
+    tipButtonThree: 15,
+    tipButtonFour: 25,
+    tipButtonFive: 50,
+};
+
+let selectedTipPercentage = 0;
+
 priceInput.addEventListener('keydown', (event) => {
     if (event.key === 'e' || event.key === 'E' || event.key === '-') {
         event.preventDefault();
@@ -52,6 +62,19 @@ peopleInput.addEventListener('keydown', (event) => {
     }
 });
 
+function calculateTip() {
+    const price = parseFloat(priceInput.value);
+    const people = parseInt(peopleInput.value);
+
+    if (isNaN(price) || isNaN(people) || people <= 0) {
+        tipAmount.innerText = "$0.00";
+        return;
+    };
+
+    const tip = (price * selectedTipPercentage) / 100;
+    tipAmount.innerText = `$${(tip / people).toFixed(2)}`;
+};
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const buttons = document.querySelectorAll('.tip');
 
@@ -70,10 +93,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 button.disabled = true;
             } else {
                 button.disabled = false;
-            }
+            };
+            selectedTipPercentage = parseFloat(customInput.value) || 0;
+            calculateTip();
         });
+        selectedTipPercentage = tipPercentages[this.id] || 0;
+        calculateTip();
     });
 });
+
+priceInput.addEventListener('input', calculateTip);
+
+peopleInput.addEventListener('input', calculateTip);
 
 resetButton.addEventListener('click', () => {
     priceInput.value = "";
