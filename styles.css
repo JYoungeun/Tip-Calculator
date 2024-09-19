@@ -337,4 +337,8 @@ p {
         height: 2rem;
         margin-left: 0.5rem;
     }
+
+    .attribution {
+        transform: translateY(14rem);
+    }
 }
