@@ -8,11 +8,11 @@ const totalAmount = document.getElementById('total-output');
 const resetButton = document.getElementById('resetBtn');
 
 const tipPercentages = {
-    tipButtonOne: 5,
-    tipButtonTwo: 10,
-    tipButtonThree: 15,
-    tipButtonFour: 25,
-    tipButtonFive: 50,
+    tipBtn1: 5,
+    tipBtn2: 10,
+    tipBtn3: 15,
+    tipBtn4: 25,
+    tipBtn5: 50,
 };
 
 let selectedTipPercentage = 0;
@@ -43,12 +43,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', function() {
             buttons.forEach(tip => tip.classList.remove('active'));
             this.classList.add('active');
-            selectedTipPercentage = tipPercentages[this.id];
+            selectedTipPercentage = tipPercentages[this.id] || 0;
             calculateTip();
         });
 
         customInput.addEventListener('click', () => {
             buttons.forEach(tip => tip.classList.remove('active'));
+            tipAmount.innerText = "$0.00";
         });
 
         customInput.addEventListener('input', () => {
@@ -60,20 +61,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             selectedTipPercentage = parseFloat(customInput.value) || 0;
             calculateTip();
         });
-
     });
 });
 
-[priceInput, customInput].forEach(input => {
+[priceInput, customInput, peopleInput].forEach(input => {
     input.addEventListener('keydown', (event) => {
         if (event.key === 'e' || event.key === 'E' || event.key === '-') {
             event.preventDefault();
-        }
+        };
+    });
+
+    input.addEventListener('input', () => {
+        if (parseFloat(input.value) < 0) {
+            input.value = '';
+        };
     });
 });
 
 peopleInput.addEventListener('keydown', (event) => {
-    if (event.key === 'e' || event.key === "E" || event.key === '-' || event.key === '.') {
+    if (event.key === '.') {
         event.preventDefault();
     };
 });
@@ -90,15 +96,15 @@ peopleInput.addEventListener('input', () => {
         alertText.classList.add('hidden');
         peopleInput.style.borderColor = '';
         isInputLocked = false;
-    }
+    };
 });
 
 peopleInput.addEventListener('keydown', (event) => {
     if (isInputLocked) {
-        if (event.key !== 'Backspace' && event.key !== 'Delete') {
+        if (event.key !== 'Backspace' && event.key !== 'Delete' && event.key !== 'ArrowUp') {
             event.preventDefault();
-        }
-    }
+        };
+    };
 });
 
 resetButton.addEventListener('click', () => {
