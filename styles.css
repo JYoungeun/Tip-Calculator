@@ -117,6 +117,10 @@ main {
     background-color: var(--Light-grayish-cyan);
 }
 
+.tip.active {
+    background-color: var(--Light-grayish-cyan);
+}
+
 .custom {
     font-family: Space Mono, sans-serif;
     font-weight: 700;
