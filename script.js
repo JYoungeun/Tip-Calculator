@@ -1,5 +1,6 @@
 const priceInput = document.getElementById('price');
 const peopleInput = document.getElementById('number-people');
+const buttons = document.querySelectorAll('.tip');
 const tipButtonOne = document.getElementById('tipBtn1');
 const tipButtonTwo = document.getElementById('tipBtn2');
 const tipButtonThree = document.getElementById('tipBtn3');
@@ -27,11 +28,15 @@ function calculateTip() {
 
     if (isNaN(price) || isNaN(people) || people <= 0) {
         tipAmount.innerText = "$0.00";
+        totalAmount.innerText = "$0.00";
         return;
     };
 
     const tip = (price * selectedTipPercentage) / 100;
+    const total = price + tip;
+
     tipAmount.innerText = `$${(tip / people).toFixed(2)}`;
+    totalAmount.innerText = `$${(total / people).toFixed(2)}`;
 };
 
 priceInput.addEventListener('input', calculateTip);
@@ -39,8 +44,6 @@ priceInput.addEventListener('input', calculateTip);
 peopleInput.addEventListener('input', calculateTip);
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const buttons = document.querySelectorAll('.tip');
-
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             buttons.forEach(tip => tip.classList.remove('active'));
@@ -60,25 +63,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
             selectedTipPercentage = parseFloat(customInput.value) || 0;
             calculateTip();
         });
-        selectedTipPercentage = tipPercentages[this.id] || 0;
-        calculateTip();
+
     });
 });
 
-priceInput.addEventListener('keydown', (event) => {
-    if (event.key === 'e' || event.key === 'E' || event.key === '-') {
-        event.preventDefault();
-    }
-});
-
-customInput.addEventListener('keydown', (event) => {
-    if (event.key === 'e' || event.key === "E" || event.key === '-') {
-        event.preventDefault();
-    };
+[priceInput, customInput].forEach(input => {
+    input.addEventListener('keydown', (event) => {
+        if (event.key === 'e' || event.key === 'E' || event.key === '-') {
+            event.preventDefault();
+        }
+    });
 });
 
 peopleInput.addEventListener('keydown', (event) => {
-    if (event.key === 'e' || event.key === "E" || event.key === '-') {
+    if (event.key === 'e' || event.key === "E" || event.key === '-' || event.key === '.') {
         event.preventDefault();
     };
 });
@@ -112,9 +110,8 @@ resetButton.addEventListener('click', () => {
     peopleInput.value = "";
     tipAmount.innerText = "$0.00";
     totalAmount.innerText = "$0.00";
-    const buttons = document.querySelectorAll('.tip');
-    buttons.forEach(tip => tip.classList.remove('active'));
     alertText.classList.add('hidden');
     peopleInput.style.borderColor = '';
     isInputLocked = false;
+    buttons.forEach(tip => tip.classList.remove('active'));
 });
